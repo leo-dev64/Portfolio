@@ -218,3 +218,8 @@ footer b{color:var(--red)}
   .rv,.split .ch{opacity:1;transform:none;translate:none}
   .topo .pkt{display:none}
 }
+
+/* projets */
+.proj-grid{grid-template-columns:1fr}
+.proj p{margin-bottom:10px}
+.proj .chips{margin:14px 0 18px}

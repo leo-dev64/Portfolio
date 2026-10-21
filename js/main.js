@@ -199,10 +199,11 @@ const HIDDEN = {
 const fileOf = (map, n) => Object.keys(map).find(k => k.toLowerCase() === n.toLowerCase());
 const IPCFG = 'eth0: inet 192.168.10.42/24  gateway 192.168.10.1  vlan 10\n      statut : motivé · disponible pour un stage / une alternance';
 const cmds = {
-  help: () => 'Portfolio : whoami · skills · certifs · xp · contact\nFichiers  : ls · cat &lt;fichier&gt; · pwd · cd\nRéseau    : ip a · ping · traceroute · nslookup · ss · show vlan\nSystème   : uname -a · uptime · date · hostname · id · neofetch · history · echo\nTerminal  : clear · man &lt;cmd&gt; · ↑/↓ historique · Tab pour compléter',
+  help: () => 'Portfolio : whoami · skills · certifs · xp · projets · contact\nFichiers  : ls · cat &lt;fichier&gt; · pwd · cd\nRéseau    : ip a · ping · traceroute · nslookup · ss · show vlan\nSystème   : uname -a · uptime · date · hostname · id · neofetch · history · echo\nTerminal  : clear · man &lt;cmd&gt; · ↑/↓ historique · Tab pour compléter',
   whoami: () => `leo — Léo Liénard, ${age} ans, Bac pro CIEL IT, orienté réseau & infrastructure.`,
   id: () => 'uid=1000(leo) gid=1000(leo) groupes=1000(leo),27(sudo),100(ciel),101(netacad)',
   skills: () => FILES['skills.txt'],
+  projets: () => 'Claudio de la route — entraînement au code de la route (Node.js, SQLite, VPS) : <a href="https://claudio.leodev.fr" target="_blank" rel="noopener">claudio.leodev.fr</a>',
   certifs: () => 'Cisco NetAcad · Root-Me Pro · SecNumacadémie ANSSI (100%) · PIX 800',
   xp: () => 'OCI — réseau, télécoms, Exchange (2025)\nLDE — bases de données (2023 · 2025 · 2026)',
   pwd: () => '/home/leo',
