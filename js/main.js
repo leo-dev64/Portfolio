@@ -359,3 +359,19 @@ $('#copy').addEventListener('click', e => {
   const b = e.currentTarget;
   navigator.clipboard?.writeText(EMAIL).then(() => { b.textContent = 'Copié'; setTimeout(() => b.textContent = "Copier l'email", 1800); });
 });
+
+// Formulaire de contact : envoyé par le serveur de leodev.fr vers ma boîte mail
+const cform = document.getElementById('cform');
+if (cform) cform.addEventListener('submit', async e => {
+  e.preventDefault();
+  const msg = document.getElementById('cformMsg'), btn = cform.querySelector('button');
+  btn.disabled = true; msg.className = 'cform-msg'; msg.textContent = '> envoi…';
+  try {
+    const res = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ...Object.fromEntries(new FormData(cform)), site: 'leodev.fr' }) });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(data.error || 'Envoi impossible, réessaie plus tard.');
+    cform.reset(); msg.className = 'cform-msg ok'; msg.textContent = '> message envoyé, merci ! Je te réponds vite.';
+  } catch (x) { msg.className = 'cform-msg ko'; msg.textContent = '> ' + x.message; }
+  btn.disabled = false;
+});

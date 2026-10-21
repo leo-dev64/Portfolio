@@ -191,6 +191,16 @@
     <a class="btn fill" href="mailto:Lienardleo09@gmail.com">Lienardleo09@gmail.com</a>
     <button class="btn" id="copy" type="button">Copier l'email</button>
   </div>
+  <form class="cform rv" id="cform" novalidate>
+    <p class="cform-t">&gt; ou écris-moi directement</p>
+    <div class="cform-row">
+      <label>nom<input name="name" autocomplete="name" required maxlength="80"></label>
+      <label>email<input name="email" type="email" autocomplete="email" required maxlength="120"></label>
+    </div>
+    <label>message<textarea name="message" rows="5" required minlength="10" maxlength="4000"></textarea></label>
+    <input name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div class="cform-row end"><p class="cform-msg" id="cformMsg" role="status"></p><button class="btn fill" type="submit">Envoyer</button></div>
+  </form>
 </section>
 </main>
 

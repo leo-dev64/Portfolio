@@ -223,3 +223,15 @@ footer b{color:var(--red)}
 .proj-grid{grid-template-columns:1fr}
 .proj p{margin-bottom:10px}
 .proj .chips{margin:14px 0 18px}
+/* formulaire de contact */
+.cform{margin-top:28px;padding:clamp(18px,3vw,28px);border:1px solid var(--line);background-color:var(--bg2);display:grid;gap:14px}
+.cform-t{font-family:'JetBrains Mono',monospace;color:var(--red);font-size:.9rem}
+.cform-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cform-row.end{grid-template-columns:1fr auto;align-items:center}
+.cform label{display:grid;gap:6px;font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--mute);text-transform:lowercase}
+.cform input,.cform textarea{width:100%;padding:12px 14px;border:1px solid var(--line);background:var(--bg);color:var(--txt);font:inherit;font-family:'Space Grotesk',sans-serif;font-size:1rem;border-radius:0;resize:vertical}
+.cform input:focus,.cform textarea:focus{outline:none;border-color:var(--red)}
+.cform-msg{font-family:'JetBrains Mono',monospace;font-size:.85rem;color:var(--mute)}
+.cform-msg.ok{color:#3ee08f}.cform-msg.ko{color:var(--red)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+@media (max-width:640px){.cform-row,.cform-row.end{grid-template-columns:1fr}}
