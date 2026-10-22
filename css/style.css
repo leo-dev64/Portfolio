@@ -1,3 +1,5 @@
+@font-face{font-family:'JetBrains Mono';src:url(../assets/fonts/jetbrains-mono.woff2) format('woff2');font-weight:100 800;font-display:swap}
+@font-face{font-family:'Space Grotesk';src:url(../assets/fonts/space-grotesk.woff2) format('woff2');font-weight:300 700;font-display:swap}
 :root{
   --bg:#09090b; --bg2:#111115; --line:#24242b; --txt:#ececf1; --mute:#9393a0;
   --red:#ff2d46; --red2:#b3001b; --glow:rgba(255,45,70,.4);
